@@ -1,7 +1,7 @@
 /*Styling the body*/
 body{
   font-family: 'Poppins', sans-serif;
-  background: darkgreen;
+  background: rgb(187, 216, 187);
 }
 
 .container{
@@ -11,11 +11,20 @@ body{
 section{
   max-width: 1200px;
   margin:0 auto;
+  padding: 100px 0;
 }
+/*Displaying grids*/
 .grid{
   display: grid;
+  gap: 64px;
+}
+.grid-2-columns{
+  grid-template-columns: repeat(2,1fr);
+}
+.grid-3-columns-with-first-narrow{
   grid-template-columns: 1fr 2fr 2fr;
 }
+/*Styling the header*/
 header{
   background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.3)),url(../images/nairobi.jpg);
   background-repeat: no-repeat;
@@ -63,14 +72,45 @@ header a{
   text-decoration: none;
   color:#272044 ;
 }
-
+/*Styling the main*/
+main{
+  background-color: #FFFFFF;
+}
+.img-responsive{
+  max-width: 100%;
+}
+main h2{
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  letter-spacing: 5px;
+  color: #272044;
+  opacity: 0.4;
+  text-transform: uppercase;
+}
+main h3{
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.5;
+  color: #272044;
+  margin: 0;
+}
+main p{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #272044;
+  opacity: 0.7;
+}
 /*Styling the footer*/
 footer{
   color:white;
   background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../images/nation-center.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 100px 0;
+  
 }
 footer h3{
   font-weight: 700;
@@ -81,7 +121,6 @@ footer p{
   font-weight: 400;
   font-size: 16px;
   opacity: 0.7;
-  margin-right: 30px;
   line-height:24px;
   
 }
@@ -113,5 +152,12 @@ footer a {
   }
   header h3{
     font-size: 12px;
+  }
+  .grid{
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  section{
+    padding:30px;
   }
 }
